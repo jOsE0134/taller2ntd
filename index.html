@@ -32,16 +32,69 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#portfolio">Aprenderás mas sobre mi aquí</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#about">Resumen sobre mi vida y algo más</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#contact">Conviertete en algo a mí</a></li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Aprenderás más sobre mí aquí</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Resumen sobre mi vida y algo más</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Conviértete en algo a mí</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <style>
+        /* Estilos para la navegación */
+        .navbar {
+            transition: background-color 0.3s ease;
+            /* Transición suave al cambiar el color */
+        }
+
+        .navbar:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Color al pasar el mouse */
+        }
+
+        .nav-link {
+            position: relative;
+            /* Para el efecto de subrayado */
+            color: #fff;
+            /* Color del texto */
+            transition: color 0.3s ease;
+            /* Transición suave del color */
+        }
+
+        .nav-link:hover {
+            color: #ffd700;
+            /* Color dorado al pasar el mouse */
+        }
+
+        .nav-link::after {
+            content: '';
+            /* Crea un pseudo-elemento */
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            /* Espaciado inferior */
+            height: 2px;
+            /* Altura de la línea */
+            background-color: #ffd700;
+            /* Color de la línea */
+            transform: scaleX(0);
+            /* Escala inicial en 0 */
+            transition: transform 0.3s ease;
+            /* Transición suave */
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            /* Escala al 100% al pasar el mouse */
+        }
+    </style>
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
